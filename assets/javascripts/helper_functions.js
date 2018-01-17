@@ -154,14 +154,17 @@ function convertToBoolean(value){
   return (value != 'false' && value != '0' && value != 'no' && value!==false);
 }
 
-function getFilterValue(filter){
-  if(filter){
-    if(filter.value){
-      return filter.value
-    }else{
-      return filter
+function getSelectedValues(select) {
+  var result = [];
+  var options = select && select.options;
+  var opt;
+
+  for (var i=0, iLen=options.length; i<iLen; i++) {
+    opt = options[i];
+
+    if (opt.selected) {
+      result.push(opt.value || opt.text);
     }
-  }else{
-    return "";
   }
+  return result;
 }
