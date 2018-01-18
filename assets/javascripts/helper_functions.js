@@ -168,3 +168,11 @@ function getSelectedValues(select) {
   }
   return result;
 }
+
+function insertBefore(el, referenceNode) {
+  referenceNode.parentNode.insertBefore(el, referenceNode);
+}
+
+function last_of(array){
+  return array[array.length - 1];
+}
