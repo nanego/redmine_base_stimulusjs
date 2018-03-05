@@ -30,19 +30,14 @@ JS Controller
 
     (function() {
       stimulus_application.register("hello", class extends Stimulus.Controller {
+      
+        static targets = [ "name", "output" ]
+        
         greet() {
-          const greeting = "Hello, " + this.name;
-          console.log(greeting);
-          this.targets.find("output").value = greeting
+          const greeting = "Hello, " + this.nameTarget.value
+          this.outputTarget.value = greeting
         }
-    
-        get name(){
-          return this.inputElement.value;
-        }
-    
-        get inputElement(){
-          return this.targets.find("name")
-        }
+
       })
     })();
 
