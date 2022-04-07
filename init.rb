@@ -1,5 +1,8 @@
 require 'redmine'
-require 'redmine_base_stimulusjs/hooks'
+
+ActiveSupport::Reloader.to_prepare do
+  require_dependency 'redmine_base_stimulusjs/hooks'
+end
 
 Redmine::Plugin.register :redmine_base_stimulusjs do
   name 'Redmine Base StimulusJS plugin'
