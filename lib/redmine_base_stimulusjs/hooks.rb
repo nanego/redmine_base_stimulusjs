@@ -1,4 +1,4 @@
-module RedmineBaseStimulusJS
+module RedmineBaseStimulusjs
   class Hooks < Redmine::Hook::ViewListener
     def view_layouts_base_html_head(context)
       tags = javascript_include_tag("stimulusjs-1.1.1.js", :plugin => "redmine_base_stimulusjs")
