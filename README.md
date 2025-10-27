@@ -1,6 +1,12 @@
 Redmine base_stimulusjs plugin
 ======================
 
+> **⚠️ DEPRECATION NOTICE**
+> This plugin is **no longer needed for Redmine 6.1 and later versions**.
+> Starting with Redmine 6.1, Stimulus is included in the core application.
+> Only use this plugin if you are running Redmine 6.0 or earlier.
+
+
 This plugin adds the StimulusJS framework to your Redmine application, so it can easily be used by other plugins
 
 Installation
